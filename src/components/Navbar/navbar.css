@@ -1,0 +1,42 @@
+.navbar-place {
+  width: 100%;
+  background-color: #232323;
+  font-family: "Poppins", sans-serif;
+}
+.navbar-place .navbar {
+  width: 100%;
+  max-width: 1140px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0 auto;
+}
+
+.navbar-place .navbar .logo span {
+  color: rgb(243, 63, 63);
+}
+.navbar-place .navbar ul.links {
+  display: flex;
+  margin: 0;
+}
+
+.navbar-place .navbar .links li {
+  cursor: pointer;
+  font-size: 1rem;
+  margin: 0 25px;
+  padding: 30px 0;
+  position: relative;
+  font-weight: lighter;
+  color: white;
+}
+.navbar-place .navbar .links .active li::after {
+  content: "";
+  width: 100%;
+  padding: 0 10px;
+  height: 3px;
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: rgb(243, 63, 63);
+}
