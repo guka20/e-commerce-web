@@ -2,6 +2,8 @@
   width: 100%;
   background-color: #232323;
   font-family: "Poppins", sans-serif;
+  position: absolute;
+  z-index: 5;
 }
 .navbar-place .navbar {
   width: 100%;
@@ -27,7 +29,18 @@
   padding: 30px 0;
   position: relative;
   font-weight: lighter;
-  color: white;
+}
+.navbar-place .navbar .links li:hover::after {
+  content: "";
+  width: 100%;
+  padding: 0 10px;
+  height: 3px;
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: rgb(243, 63, 63);
+  animation: hover-animation 0.5s 1;
 }
 .navbar-place .navbar .links .active li::after {
   content: "";
@@ -39,4 +52,15 @@
   left: 50%;
   transform: translateX(-50%);
   background-color: rgb(243, 63, 63);
+}
+
+@keyframes hover-animation {
+  from {
+    bottom: 20px;
+    background-color: rgb(220, 133, 133);
+  }
+  to {
+    bottom: 0;
+    background-color: rgb(243, 63, 63);
+  }
 }

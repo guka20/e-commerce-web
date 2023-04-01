@@ -1,14 +1,14 @@
 import React, { ReactNode } from "react";
 import "./header.css";
-import { Navbar } from "../Navbar";
 type HeaderProps = {
   children: ReactNode;
 };
-export const Header = ({ children }: HeaderProps) => {
-  return (
-    <header className="header">
-      <Navbar />
-      {children}
-    </header>
-  );
+export const HeaderOne = ({ children }: HeaderProps) => {
+  return <header className="header one">{children}</header>;
+};
+export const HeaderTwo = ({ children }: HeaderProps) => {
+  return <header className="header two">{children}</header>;
+};
+export const HeaderThree = ({ children }: HeaderProps) => {
+  return <header className="header three">{children}</header>;
 };
