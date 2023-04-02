@@ -1,5 +1,8 @@
 import React from "react";
-
 export const Product = () => {
-  return <div>Product</div>;
+  return (
+    <div>
+      <div className="loading-board"></div>Product
+    </div>
+  );
 };

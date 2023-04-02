@@ -2,8 +2,9 @@
   width: 100%;
   background-color: #232323;
   font-family: "Poppins", sans-serif;
-  position: absolute;
+  position: fixed;
   z-index: 5;
+  transition: all 0.5s;
 }
 .navbar-place .navbar {
   width: 100%;

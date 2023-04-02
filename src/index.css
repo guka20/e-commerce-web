@@ -3,10 +3,63 @@ body {
   margin: 0;
   padding: 0;
 }
+
 * {
   list-style: none;
   outline: none;
   text-decoration: none;
   color: white;
   font-family: "Poppins", sans-serif;
+  transition: all 0.5s;
+}
+.swiper-pagination-bullet {
+  padding: 1px;
+  margin: 10px !important;
+  /* background-color: rgb(255, 255, 255) !important; */
+}
+
+.swiper-pagination > .swiper-pagination-bullet {
+  background-color: rgb(255, 255, 255) !important;
+  opacity: 0.6;
+}
+.swiper-pagination > .swiper-pagination-bullet-active {
+  background-color: white;
+  opacity: 1;
+}
+
+body {
+  animation-name: scrl;
+  animation-duration: 1s;
+  animation-delay: 2s;
+}
+@keyframes scrl {
+  from {
+    overflow: none;
+  }
+  to {
+    overflow: auto;
+  }
+}
+.loading-board {
+  top: 0;
+  left: 0;
+  position: absolute;
+  width: 100%;
+  height: 100vh;
+  background-color: rgb(177, 36, 36);
+  z-index: 0;
+  animation-name: redbackround;
+  opacity: 0;
+  animation-duration: 1s;
+}
+@keyframes redbackround {
+  0% {
+    opacity: 1;
+    z-index: 999;
+  }
+
+  100% {
+    opacity: 0;
+    z-index: 0;
+  }
 }
