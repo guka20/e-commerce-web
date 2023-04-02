@@ -1,0 +1,16 @@
+.latest-products {
+  margin-top: 50px;
+  width: 100%;
+}
+.latest-products .body-heading {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.latest-products .body-heading h1 {
+  font-size: 1.8rem;
+}
+.latest-products .body-heading .products-link a {
+  color: rgb(243, 63, 63);
+}

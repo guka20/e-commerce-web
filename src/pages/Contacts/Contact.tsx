@@ -1,6 +1,10 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { Header } from "../../components";
+import { controllScreen } from "../../config/controllScreen";
 export const Contact = () => {
+  useEffect(() => {
+    controllScreen();
+  }, []);
   return (
     <div>
       <div className="loading-board"></div>

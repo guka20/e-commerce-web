@@ -6,7 +6,7 @@ import {
   RouterProvider,
 } from "react-router-dom";
 import { Product, Home, About, Products, Contact } from "../pages";
-import { RootLayout } from "../Layouts/RootLayout";
+import { RootLayout } from "../Layouts";
 const router = createBrowserRouter(
   createRoutesFromElements(
     <Route path="/" element={<RootLayout />}>
