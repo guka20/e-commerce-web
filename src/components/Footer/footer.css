@@ -1,0 +1,15 @@
+.footer {
+  margin: 100px 0;
+  text-align: center;
+}
+.footer p {
+  margin-bottom: 0px;
+  font-size: 14px;
+  font-weight: 300;
+  color: #4a4a4a;
+  line-height: 24px;
+}
+.footer p a {
+  margin-left: 10px;
+  color: #f33f3f;
+}

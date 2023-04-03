@@ -2,14 +2,18 @@
   margin-top: 50px;
   width: 100%;
 }
-.latest-products .body-heading {
+.body-heading {
   width: 100%;
   display: flex;
   justify-content: space-between;
   align-items: center;
+  border-bottom: 1px solid rgb(231, 231, 231);
+  margin-bottom: 50px;
 }
 .latest-products .body-heading h1 {
   font-size: 1.8rem;
+  margin: 10px 0;
+  font-weight: lighter !important;
 }
 .latest-products .body-heading .products-link a {
   font-size: 13px;
@@ -21,4 +25,55 @@
   display: grid;
   grid-template-columns: auto auto auto;
   gap: 20px;
+}
+.about-sexteen-clothing {
+  margin-top: 100px;
+}
+.about-sexteen-clothing h1 {
+  font-weight: 100 !important;
+  font-size: 1.7rem;
+}
+.about-sexteen-clothing .description {
+  display: flex;
+  align-items: flex-start;
+}
+.about-sexteen-clothing .description .texture {
+  font-size: 14px;
+}
+.about-sexteen-clothing .description .texture h4 {
+  color: #1a6692;
+  font-size: 1.1rem;
+  margin: 0 0 20px 0;
+  font-weight: 600;
+}
+
+.about-sexteen-clothing .description .texture p a {
+  color: #007bff;
+}
+.about-sexteen-clothing .description .texture .description-list {
+  padding: 0 20px;
+}
+.about-sexteen-clothing .description .texture .description-list li {
+  margin: 15px 0;
+  list-style: square;
+}
+.about-sexteen-clothing .description img {
+  width: 540px;
+}
+.creative-and-unique {
+  margin-top: 100px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 30px;
+  background-color: #f7f7f7;
+}
+.creative-and-unique h4 {
+  color: #1a6692;
+  font-weight: 100;
+  margin: 10px 0;
+}
+.creative-and-unique p {
+  margin: 0;
+  font-size: 14px;
 }

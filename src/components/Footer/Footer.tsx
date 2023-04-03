@@ -1,9 +1,14 @@
 import React from "react";
-
+import "./footer.css";
 export const Footer = () => {
   return (
-    <footer>
-      <h1>Footer</h1>
+    <footer className="footer">
+      <p>
+        COPYRIGHT © 2023 GURAMI DAVITADZE., LTD. - DESIGN:
+        <a href="https://templatemo.com/" target="_blank" rel="noreferrer">
+          TEMPLATEMO
+        </a>
+      </p>
     </footer>
   );
 };

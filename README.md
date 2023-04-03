@@ -1,6 +1,6 @@
 # About website
 
-Website is about e-commerce. Uploadet products and their prices. every information about products is fake.
+Website is about e-commerce. Uploaded products and their prices. every information about products are fake.
 
 # Plan of website
 
@@ -12,4 +12,4 @@ Created by using HTML CSS TS and ReactJS. used fake API (https://dummyjson.com/)
 
 # About design
 
-Design is token from one website where is uploaded templates and it's free to use.
+Design is token from one website where are uploaded templates and it's free to use.
