@@ -14,3 +14,8 @@
 .latest-products .body-heading .products-link a {
   color: rgb(243, 63, 63);
 }
+.latest-products main.products-list {
+  display: grid;
+  grid-template-columns: auto auto auto;
+  gap: 20px;
+}

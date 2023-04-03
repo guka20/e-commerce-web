@@ -1,5 +1,12 @@
 import React, { useEffect } from "react";
-import { HeaderOne, HeaderTwo, HeaderThree } from "../../components";
+import {
+  HeaderOne,
+  HeaderTwo,
+  HeaderThree,
+  ProductCard,
+} from "../../components";
+import { MdKeyboardArrowRight } from "react-icons/md";
+
 import { BodyLayout } from "../../Layouts";
 import { NavLink } from "react-router-dom";
 import { Swiper, SwiperSlide } from "swiper/react";
@@ -58,15 +65,25 @@ export const Home = () => {
       {/* =============================== BODY PLACE ===============================*/}
       <BodyLayout>
         <section className="latest-products">
-          <div className="body-heading">
+          <header className="body-heading">
             <h1>Latest Products</h1>
 
             <span className="products-link">
-              <NavLink to="/products">VIEW ALL PRODUCTS</NavLink>
+              <NavLink to="/products" style={{ textAlign: "center" }}>
+                VIEW ALL PRODUCTS
+                <MdKeyboardArrowRight fontSize="2rem" />
+              </NavLink>
             </span>
-          </div>
+          </header>
+          <main className="products-list">
+            <ProductCard />
+            <ProductCard />
+            <ProductCard />
+            <ProductCard />
+            <ProductCard />
+            <ProductCard />
+          </main>
         </section>
-        Products
       </BodyLayout>
     </>
   );

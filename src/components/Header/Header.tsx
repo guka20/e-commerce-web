@@ -10,7 +10,7 @@ type HeaderProps = {
 export const Header = ({ children, imageUrl }: HeaderProps) => {
   return (
     <header
-      className="header"
+      className="page-header"
       style={{
         backgroundImage: `url(${require(`../../images/${imageUrl}`)})`,
         height: "460px",
@@ -21,11 +21,11 @@ export const Header = ({ children, imageUrl }: HeaderProps) => {
   );
 };
 export const HeaderOne = ({ children }: SliderHeaderProps) => {
-  return <header className="header one">{children}</header>;
+  return <header className="page-header one">{children}</header>;
 };
 export const HeaderTwo = ({ children }: SliderHeaderProps) => {
-  return <header className="header two">{children}</header>;
+  return <header className="page-header two">{children}</header>;
 };
 export const HeaderThree = ({ children }: SliderHeaderProps) => {
-  return <header className="header three">{children}</header>;
+  return <header className="page-header three">{children}</header>;
 };
