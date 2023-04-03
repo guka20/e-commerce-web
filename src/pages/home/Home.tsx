@@ -69,9 +69,9 @@ export const Home = () => {
             <h1>Latest Products</h1>
 
             <span className="products-link">
-              <NavLink to="/products" style={{ textAlign: "center" }}>
+              <NavLink to="/products">
                 VIEW ALL PRODUCTS
-                <MdKeyboardArrowRight fontSize="2rem" />
+                <MdKeyboardArrowRight style={{ verticalAlign: "middle" }} />
               </NavLink>
             </span>
           </header>
