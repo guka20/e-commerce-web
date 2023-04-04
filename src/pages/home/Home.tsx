@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import {
   HeaderOne,
   HeaderTwo,
@@ -7,18 +7,27 @@ import {
   PrimaryButton,
 } from "../../components";
 import { MdKeyboardArrowRight } from "react-icons/md";
-import { BodyLayout } from "../../Layouts";
+import { BodyLayout, ProductsList } from "../../Layouts";
 import { Link, NavLink } from "react-router-dom";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Pagination } from "swiper";
 import { controllScreen } from "../../config/controllScreen";
-
+import axios from "../../config/api";
 import "swiper/css";
 import "swiper/css/pagination";
 import "./home.css";
+import { ProductsDataProt } from "../../props/props";
 
 export const Home = () => {
+  const [productData, setProductData] = useState<ProductsDataProt>();
+  const getProductsData = async (url: string) => {
+    const resp = await axios.get(url);
+    setProductData(resp.data.products);
+  };
   useEffect(() => {
+    try {
+      getProductsData("products?limit=6");
+    } catch (error) {}
     controllScreen();
   }, []);
 
@@ -76,14 +85,20 @@ export const Home = () => {
               </NavLink>
             </span>
           </header>
-          <main className="products-list">
-            <ProductCard />
-            <ProductCard />
-            <ProductCard />
-            <ProductCard />
-            <ProductCard />
-            <ProductCard />
-          </main>
+          <ProductsList>
+            {productData &&
+              productData.map((l) => (
+                <ProductCard
+                  key={l.id}
+                  image={l.images[0]}
+                  title={l.title}
+                  price={l.price + ""}
+                  description={l.description}
+                  rating={Math.floor(l.rating)}
+                  review={l.stock + ""}
+                />
+              ))}
+          </ProductsList>
         </section>
         <section className="about-sexteen-clothing">
           <header className="body-heading">

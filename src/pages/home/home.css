@@ -21,11 +21,6 @@
   color: #f33f3f;
 }
 
-.latest-products main.products-list {
-  display: grid;
-  grid-template-columns: auto auto auto;
-  gap: 20px;
-}
 .about-sexteen-clothing {
   margin-top: 100px;
 }

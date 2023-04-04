@@ -1,8 +1,6 @@
 import React from "react";
+import { ComponentProps } from "../../props/props";
 import "./BodyLayout.css";
-type BodyLayoutProps = {
-  children: React.ReactNode;
-};
-export const BodyLayout = ({ children }: BodyLayoutProps) => {
+export const BodyLayout = ({ children }: ComponentProps) => {
   return <main className="body-place">{children}</main>;
 };
