@@ -4,8 +4,8 @@ export const MemberCard = () => {
   return (
     <div className="card">
       <img src={require("../../../../images/team_01.jpg")} alt="" />
-      <h4>Johnny William</h4>
-      <h5>Co-founder</h5>
+      <span className="member-name">Johnny William</span>
+      <span className="member-proffesion">Co-founder</span>
       <p>
         Lorem ipsum dolor sit amet, consectetur adipisicing itaque corporis
         nulla.

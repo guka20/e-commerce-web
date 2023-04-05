@@ -1,14 +1,19 @@
 .card {
   text-align: center;
 }
-.card h4 {
+.card span {
+  display: block;
+}
+.card .member-name {
   color: #1a6692;
   font-size: 17px;
+  margin-bottom: 8px;
 }
-.card h5 {
+.card .member-proffesion {
   font-size: 13px;
   color: #f33f3f;
   font-weight: 500;
+  margin-bottom: 20px;
 }
 .card p {
   font-size: 14px;
