@@ -1,7 +1,7 @@
 import React, { useEffect } from "react";
 import { Header } from "../../components";
 import { controllScreen } from "../../config/controllScreen";
-import { BodyLayout } from "../../Layouts";
+import { BodyLayout, ProductsList } from "../../Layouts";
 import {
   FaFacebookF,
   FaTwitter,
@@ -9,6 +9,7 @@ import {
   FaBehance,
 } from "react-icons/fa";
 import "./about.css";
+import { MemberCard } from "./components/MemberCard";
 export const About = () => {
   useEffect(() => {
     controllScreen();
@@ -65,7 +66,19 @@ export const About = () => {
             </div>
           </div>
         </section>
-        <section className="team-members"></section>
+        <section className="team-members">
+          <header className="body-heading">
+            <h1>Our Team Members</h1>
+          </header>
+          <ProductsList>
+            <MemberCard />
+            <MemberCard />
+            <MemberCard />
+            <MemberCard />
+            <MemberCard />
+            <MemberCard />
+          </ProductsList>
+        </section>
       </BodyLayout>
     </div>
   );
