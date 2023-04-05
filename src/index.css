@@ -9,7 +9,7 @@ body {
   outline: none;
   text-decoration: none;
   font-family: "Poppins", sans-serif;
-  transition: all 0.5s;
+  transition: background 0.5s;
 }
 .swiper-pagination-bullet {
   padding: 1px;

@@ -1,11 +1,11 @@
 import React, { useEffect, useState } from "react";
 import { Header, ProductCard } from "../../components/";
-
 import "./product.css";
 import { controllScreen } from "../../config/controllScreen";
 import { BodyLayout, ProductsList } from "../../Layouts";
 import { ProductsDataProt } from "../../props/props";
 import axios from "../../config/api";
+
 export const Products = () => {
   const [productData, setProductData] = useState<ProductsDataProt>();
   const [skip, setSkip] = useState<Number>(0);
