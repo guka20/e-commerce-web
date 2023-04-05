@@ -10,12 +10,13 @@ import {
 } from "react-icons/fa";
 import "./about.css";
 import { MemberCard } from "./components/MemberCard";
+import { ServiceCard } from "./components/ServiceCard";
 export const About = () => {
   useEffect(() => {
     controllScreen();
   }, []);
   return (
-    <div>
+    <div className="about-page">
       <div className="loading-board"></div>
       <Header imageUrl="about-heading.jpg">
         <div className="headers-container">
@@ -70,16 +71,69 @@ export const About = () => {
           <header className="body-heading">
             <h1>Our Team Members</h1>
           </header>
+
           <ProductsList>
-            <MemberCard />
-            <MemberCard />
-            <MemberCard />
-            <MemberCard />
-            <MemberCard />
-            <MemberCard />
+            <MemberCard
+              image="team_01.jpg"
+              name="Johnny William"
+              proffesion="Co-Founder"
+              description="Lorem ipsum dolor sit amet, consectetur adipisicing itaque corporis nulla."
+            />
+            <MemberCard
+              image="team_02.jpg"
+              name="Karry Pitcher"
+              proffesion="Product Expert"
+              description="Lorem ipsum dolor sit amet, consectetur adipisicing itaque corporis nulla."
+            />
+            <MemberCard
+              image="team_03.jpg"
+              name="Michael Soft"
+              proffesion="Chief Marketing"
+              description="Lorem ipsum dolor sit amet, consectetur adipisicing itaque corporis nulla."
+            />
+            <MemberCard
+              image="team_04.jpg"
+              name="Mary Cool"
+              proffesion="Product Specialist"
+              description="Lorem ipsum dolor sit amet, consectetur adipisicing itaque corporis nulla."
+            />
+            <MemberCard
+              image="team_05.jpg"
+              name="George Walker"
+              proffesion="Product Photographer"
+              description="Lorem ipsum dolor sit amet, consectetur adipisicing itaque corporis nulla."
+            />
+            <MemberCard
+              image="team_06.jpg"
+              name="Kate Town"
+              proffesion="General Manager"
+              description="Lorem ipsum dolor sit amet, consectetur adipisicing itaque corporis nulla."
+            />
           </ProductsList>
         </section>
       </BodyLayout>
+      <section className="services-section">
+        <div className="service-bg"></div>
+        <div className="services-place">
+          <ProductsList>
+            <ServiceCard
+              title="Product Management"
+              description="Lorem ipsum dolor sit amet, consectetur an adipisicing elit. Itaque, corporis nulla at quia quaerat."
+              buttonText="Read More"
+            />
+            <ServiceCard
+              title="Customer Relations"
+              description="Lorem ipsum dolor sit amet, consectetur an adipisicing elit. Itaque, corporis nulla at quia quaerat."
+              buttonText="Details"
+            />
+            <ServiceCard
+              title="Global Collection"
+              description="Lorem ipsum dolor sit amet, consectetur an adipisicing elit. Itaque, corporis nulla at quia quaerat."
+              buttonText="Read More"
+            />
+          </ProductsList>
+        </div>
+      </section>
     </div>
   );
 };
