@@ -8,6 +8,7 @@ import {
   FaLinkedinIn,
   FaBehance,
 } from "react-icons/fa";
+import { Swiper, SwiperSlide } from "swiper/react";
 import "./contact.css";
 export const Contact = () => {
   useEffect(() => {
@@ -30,10 +31,11 @@ export const Contact = () => {
           <div className="location-place">
             <iframe
               title="map"
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d113292.0132567792!2d44.72336201875393!3d41.740173274328946!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40440cd7e64f626b%3A0x61d084ede2576ea3!2sTbilisi!5e0!3m2!1sen!2sge!4v1680812261181!5m2!1sen!2sge"
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d11914.57838540081!2d44.742293208377454!3d41.70660747481656!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40440cd7e64f626b%3A0x61d084ede2576ea3!2sTbilisi!5e0!3m2!1sen!2sge!4v1680812672864!5m2!1sen!2sge"
               width="730"
               height="337"
               loading="lazy"
+              style={{ border: "0" }}
             ></iframe>
             <div className="texture">
               <h4 className="title">About our office</h4>
@@ -61,6 +63,76 @@ export const Contact = () => {
               </p>
             </div>
           </div>
+        </section>
+        <section className="partners-section">
+          <header className="body-heading">
+            <h1>Our Happy Customers</h1>
+          </header>
+          <Swiper slidesPerView={5} loop={true} spaceBetween={20}>
+            <SwiperSlide>
+              <img
+                src={require("../../images/client-01.png")}
+                alt="partner"
+                width="198px"
+              />
+            </SwiperSlide>
+            <SwiperSlide>
+              <img
+                src={require("../../images/client-01.png")}
+                alt="partner"
+                width="198px"
+              />
+            </SwiperSlide>
+            <SwiperSlide>
+              <img
+                src={require("../../images/client-01.png")}
+                alt="partner"
+                width="198px"
+              />
+            </SwiperSlide>
+            <SwiperSlide>
+              <img
+                src={require("../../images/client-01.png")}
+                alt="partner"
+                width="198px"
+              />
+            </SwiperSlide>
+            <SwiperSlide>
+              <img
+                src={require("../../images/client-01.png")}
+                alt="partner"
+                width="198px"
+              />
+            </SwiperSlide>
+            <SwiperSlide>
+              <img
+                src={require("../../images/client-01.png")}
+                alt="partner"
+                width="198px"
+              />
+            </SwiperSlide>
+            <SwiperSlide>
+              <img
+                src={require("../../images/client-01.png")}
+                alt="partner"
+                width="198px"
+              />
+            </SwiperSlide>
+            <SwiperSlide>
+              <img
+                src={require("../../images/client-01.png")}
+                alt="partner"
+                width="198px"
+              />
+            </SwiperSlide>
+            <SwiperSlide>
+              <img
+                src={require("../../images/client-01.png")}
+                alt="partner"
+                width="198px"
+              />
+            </SwiperSlide>
+          </Swiper>
         </section>
       </BodyLayout>
     </div>
