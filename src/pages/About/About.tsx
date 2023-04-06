@@ -11,6 +11,7 @@ import {
 import "./about.css";
 import { MemberCard } from "./components/MemberCard";
 import { ServiceCard } from "./components/ServiceCard";
+import { Swiper, SwiperSlide } from "swiper/react";
 export const About = () => {
   useEffect(() => {
     controllScreen();
@@ -111,29 +112,98 @@ export const About = () => {
             />
           </ProductsList>
         </section>
+        <section className="services-section">
+          <div className="services-place">
+            <ProductsList>
+              <ServiceCard
+                title="Product Management"
+                description="Lorem ipsum dolor sit amet, consectetur an adipisicing elit. Itaque, corporis nulla at quia quaerat."
+                buttonText="Read More"
+              />
+              <ServiceCard
+                title="Customer Relations"
+                description="Lorem ipsum dolor sit amet, consectetur an adipisicing elit. Itaque, corporis nulla at quia quaerat."
+                buttonText="Details"
+              />
+              <ServiceCard
+                title="Global Collection"
+                description="Lorem ipsum dolor sit amet, consectetur an adipisicing elit. Itaque, corporis nulla at quia quaerat."
+                buttonText="Read More"
+              />
+            </ProductsList>
+          </div>
+        </section>
+        <section className="partners-section">
+          <header className="body-heading">
+            <h1>Happy Partners</h1>
+          </header>
+          <Swiper slidesPerView={5} loop={true} spaceBetween={20}>
+            <SwiperSlide>
+              <img
+                src={require("../../images/client-01.png")}
+                alt="partner"
+                width="198px"
+              />
+            </SwiperSlide>
+            <SwiperSlide>
+              <img
+                src={require("../../images/client-01.png")}
+                alt="partner"
+                width="198px"
+              />
+            </SwiperSlide>
+            <SwiperSlide>
+              <img
+                src={require("../../images/client-01.png")}
+                alt="partner"
+                width="198px"
+              />
+            </SwiperSlide>
+            <SwiperSlide>
+              <img
+                src={require("../../images/client-01.png")}
+                alt="partner"
+                width="198px"
+              />
+            </SwiperSlide>
+            <SwiperSlide>
+              <img
+                src={require("../../images/client-01.png")}
+                alt="partner"
+                width="198px"
+              />
+            </SwiperSlide>
+            <SwiperSlide>
+              <img
+                src={require("../../images/client-01.png")}
+                alt="partner"
+                width="198px"
+              />
+            </SwiperSlide>
+            <SwiperSlide>
+              <img
+                src={require("../../images/client-01.png")}
+                alt="partner"
+                width="198px"
+              />
+            </SwiperSlide>
+            <SwiperSlide>
+              <img
+                src={require("../../images/client-01.png")}
+                alt="partner"
+                width="198px"
+              />
+            </SwiperSlide>
+            <SwiperSlide>
+              <img
+                src={require("../../images/client-01.png")}
+                alt="partner"
+                width="198px"
+              />
+            </SwiperSlide>
+          </Swiper>
+        </section>
       </BodyLayout>
-      <section className="services-section">
-        <div className="service-bg"></div>
-        <div className="services-place">
-          <ProductsList>
-            <ServiceCard
-              title="Product Management"
-              description="Lorem ipsum dolor sit amet, consectetur an adipisicing elit. Itaque, corporis nulla at quia quaerat."
-              buttonText="Read More"
-            />
-            <ServiceCard
-              title="Customer Relations"
-              description="Lorem ipsum dolor sit amet, consectetur an adipisicing elit. Itaque, corporis nulla at quia quaerat."
-              buttonText="Details"
-            />
-            <ServiceCard
-              title="Global Collection"
-              description="Lorem ipsum dolor sit amet, consectetur an adipisicing elit. Itaque, corporis nulla at quia quaerat."
-              buttonText="Read More"
-            />
-          </ProductsList>
-        </div>
-      </section>
     </div>
   );
 };
