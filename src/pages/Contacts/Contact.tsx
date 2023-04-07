@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import { Header } from "../../components";
 import { controllScreen } from "../../config/controllScreen";
 import { BodyLayout } from "../../Layouts";
@@ -10,10 +10,26 @@ import {
 } from "react-icons/fa";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "./contact.css";
+import { Input } from "./components/Input";
+type StateProps = {
+  fullname: string;
+  email: string;
+  subject: string;
+  message: string;
+};
 export const Contact = () => {
+  const [contact, setContact] = useState<StateProps>({
+    fullname: "",
+    email: "",
+    subject: "",
+    message: "",
+  });
   useEffect(() => {
     controllScreen();
   }, []);
+  useEffect(() => {
+    console.log(contact);
+  }, [contact]);
   return (
     <div>
       <div className="loading-board"></div>
@@ -62,6 +78,45 @@ export const Contact = () => {
                 </a>
               </p>
             </div>
+          </div>
+        </section>
+        <section className="contact-us">
+          <header className="body-header">
+            <h1>Our Location on map</h1>
+          </header>
+          <div className="inputs-textures">
+            <form>
+              <Input
+                type="text"
+                state={contact}
+                placeholder="Full Name"
+                setContact={setContact}
+                name="fullname"
+              />
+              <Input
+                type="email"
+                state={contact}
+                placeholder="E-Mail Address"
+                setContact={setContact}
+                name="email"
+              />
+              <Input
+                type="text"
+                state={contact}
+                placeholder="Subject"
+                setContact={setContact}
+                name="subject"
+              />
+              <textarea
+                name="message"
+                id="message"
+                value={contact.message}
+                onChange={(e) =>
+                  setContact({ ...contact, message: e.target.value })
+                }
+              ></textarea>
+            </form>
+            <div></div>
           </div>
         </section>
         <section className="partners-section">
