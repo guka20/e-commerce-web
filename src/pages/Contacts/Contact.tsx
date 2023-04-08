@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { Header } from "../../components";
+import { Header, PrimaryButton } from "../../components";
 import { controllScreen } from "../../config/controllScreen";
 import { BodyLayout } from "../../Layouts";
 import {
@@ -10,7 +10,7 @@ import {
 } from "react-icons/fa";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "./contact.css";
-import { Input } from "./components/Input";
+import { Input } from "./components";
 type StateProps = {
   fullname: string;
   email: string;
@@ -24,12 +24,16 @@ export const Contact = () => {
     subject: "",
     message: "",
   });
+  const [isAccordingOpen, setIsAccordingOpen] = useState({
+    one: true,
+    two: false,
+    three: false,
+    four: false,
+  });
   useEffect(() => {
     controllScreen();
   }, []);
-  useEffect(() => {
-    console.log(contact);
-  }, [contact]);
+
   return (
     <div>
       <div className="loading-board"></div>
@@ -85,38 +89,156 @@ export const Contact = () => {
             <h1>Our Location on map</h1>
           </header>
           <div className="inputs-textures">
-            <form>
-              <Input
-                type="text"
-                state={contact}
-                placeholder="Full Name"
-                setContact={setContact}
-                name="fullname"
-              />
-              <Input
-                type="email"
-                state={contact}
-                placeholder="E-Mail Address"
-                setContact={setContact}
-                name="email"
-              />
-              <Input
-                type="text"
-                state={contact}
-                placeholder="Subject"
-                setContact={setContact}
-                name="subject"
-              />
-              <textarea
-                name="message"
-                id="message"
-                value={contact.message}
-                onChange={(e) =>
-                  setContact({ ...contact, message: e.target.value })
-                }
-              ></textarea>
-            </form>
-            <div></div>
+            <div className="inputs">
+              <form>
+                <Input
+                  type="text"
+                  state={contact}
+                  placeholder="Full Name"
+                  setContact={setContact}
+                  name="fullname"
+                />
+                <Input
+                  type="email"
+                  state={contact}
+                  placeholder="E-Mail Address"
+                  setContact={setContact}
+                  name="email"
+                />
+                <Input
+                  type="text"
+                  state={contact}
+                  placeholder="Subject"
+                  setContact={setContact}
+                  name="subject"
+                />
+                <textarea
+                  name="message"
+                  id="message"
+                  value={contact.message}
+                  onChange={(e) =>
+                    setContact({ ...contact, message: e.target.value })
+                  }
+                ></textarea>
+                <PrimaryButton type="submit">Send Message</PrimaryButton>
+              </form>
+            </div>
+            <div className="textures">
+              <ul>
+                <li>
+                  <h3
+                    className={
+                      isAccordingOpen.one ? "open-header" : "close-header"
+                    }
+                    onClick={() =>
+                      setIsAccordingOpen({
+                        one: true,
+                        two: false,
+                        three: false,
+                        four: false,
+                      })
+                    }
+                  >
+                    Accordion Title One
+                  </h3>
+                  <div className={isAccordingOpen.one ? "open" : "close"}>
+                    <p>
+                      Lorem ipsum dolor sit amet, consectetur adipisic elit. Sed
+                      voluptate nihil eumester consectetur similiqu consectetur.
+                      <br />
+                      <br />
+                      Lorem ipsum dolor sit amet, consectetur adipisic elit. Et,
+                      consequuntur, modi mollitia corporis ipsa voluptate
+                      corrupti elite.
+                    </p>
+                  </div>
+                </li>
+                <li>
+                  <h3
+                    className={
+                      isAccordingOpen.two ? "open-header" : "close-header"
+                    }
+                    onClick={() =>
+                      setIsAccordingOpen({
+                        one: false,
+                        two: true,
+                        three: false,
+                        four: false,
+                      })
+                    }
+                  >
+                    Second Title Here
+                  </h3>
+                  <div className={isAccordingOpen.two ? "open" : "close"}>
+                    <p>
+                      Lorem ipsum dolor sit amet, consectetur adipisic elit. Sed
+                      voluptate nihil eumester consectetur similiqu consectetur.
+                      <br />
+                      <br />
+                      Lorem ipsum dolor sit amet, consectetur adipisic elit. Et,
+                      consequuntur, modi mollitia corporis ipsa voluptate
+                      corrupti elite.
+                    </p>
+                  </div>
+                </li>
+                <li>
+                  <h3
+                    className={
+                      isAccordingOpen.three ? "open-header" : "close-header"
+                    }
+                    onClick={() =>
+                      setIsAccordingOpen({
+                        one: false,
+                        two: false,
+                        three: true,
+                        four: false,
+                      })
+                    }
+                  >
+                    According Title Three
+                  </h3>
+                  <div className={isAccordingOpen.three ? "open" : "close"}>
+                    <p>
+                      Lorem ipsum dolor sit amet, consectetur adipisic elit. Sed
+                      voluptate nihil eumester consectetur similiqu consectetur.
+                      <br />
+                      <br />
+                      Lorem ipsum dolor sit amet, consectetur adipisic elit. Et,
+                      consequuntur, modi mollitia corporis ipsa voluptate
+                      corrupti elite.
+                    </p>
+                  </div>
+                </li>
+                <li>
+                  <h3
+                    className={
+                      isAccordingOpen.four ? "open-header" : "close-header"
+                    }
+                    onClick={() =>
+                      setIsAccordingOpen({
+                        one: false,
+                        two: false,
+                        three: false,
+                        four: true,
+                      })
+                    }
+                  >
+                    Fourth According Title
+                  </h3>
+                  <div className={isAccordingOpen.four ? "open" : "close"}>
+                    <p>
+                      Lorem ipsum dolor sit amet, consectetur adipisic elit. Sed
+                      voluptate nihil eumester consectetur similiqu consectetur.
+                      <br />
+                      <br />
+                      Lorem ipsum dolor sit amet, consectetur adipisic elit. Et,
+                      consequuntur, modi mollitia corporis ipsa voluptate
+                      corrupti elite.
+                    </p>
+                  </div>
+                </li>
+              </ul>
+            </div>
           </div>
         </section>
         <section className="partners-section">

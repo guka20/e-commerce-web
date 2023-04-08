@@ -33,3 +33,56 @@
   background-color: #f33f3f;
   color: white;
 }
+
+.contact-us .inputs-textures {
+  margin-top: 50px;
+  display: flex;
+  justify-content: space-between;
+}
+.contact-us .inputs-textures .inputs {
+  width: 700px;
+}
+.contact-us .inputs-textures .textures {
+  width: 350px;
+}
+.contact-us .inputs-textures .textures h3 {
+  margin: 0;
+  font-weight: 100;
+  cursor: pointer;
+}
+.contact-us .inputs-textures .textures .open-header {
+  color: #f33f3f;
+}
+.contact-us .inputs-textures .textures .close-header {
+  color: #1a6692;
+}
+.contact-us .inputs-textures .textures .open,
+.close {
+  overflow: hidden;
+  transition: all 1s;
+  max-height: 0;
+}
+.contact-us .inputs-textures .textures .open {
+  max-height: 400px;
+}
+.contact-us .inputs-textures .textures .open p {
+  display: block;
+}
+.contact-us .inputs-textures .textures .close p {
+  display: none;
+}
+.contact-us .inputs-textures textarea {
+  font-size: 14px;
+  min-width: 100%;
+  min-height: 120px;
+  height: 120px;
+  max-height: 180px;
+  border: 1px solid #eee;
+  border-radius: 0px;
+  margin-bottom: 30px;
+  overflow: auto;
+  resize: vertical;
+}
+.partners-section {
+  position: relative;
+}

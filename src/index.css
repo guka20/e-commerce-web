@@ -70,6 +70,7 @@ body {
   display: none;
 }
 section {
+  position: static;
   margin-top: 100px;
 }
 section header.body-header h1 {

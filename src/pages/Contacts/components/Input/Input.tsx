@@ -1,4 +1,5 @@
 import React from "react";
+import "./Input.css";
 interface SetState {
   fullname: string;
   email: string;
@@ -25,13 +26,16 @@ export const Input = ({
   name,
 }: InputProps) => {
   return (
-    <input
-      type={type}
-      placeholder={placeholder}
-      value={state[name as keyof typeof state]}
-      onChange={(e) => setContact({ ...state, [name]: e.target.value })}
-      name={name}
-      required
-    />
+    <p>
+      <input
+        type={type}
+        placeholder={placeholder}
+        value={state[name as keyof typeof state]}
+        onChange={(e) => setContact({ ...state, [name]: e.target.value })}
+        name={name}
+        required
+        className="input"
+      />
+    </p>
   );
 };
