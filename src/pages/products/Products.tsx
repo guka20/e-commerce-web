@@ -9,14 +9,25 @@ import axios from "../../config/api";
 export const Products = () => {
   const [productData, setProductData] = useState<ProductsDataProt>();
   const [skip, setSkip] = useState<Number>(0);
+  const [category, setCategory] = useState("all");
   const getProductsData = async (url: string) => {
     const resp = await axios.get(url);
     setProductData(resp.data.products);
   };
   useEffect(() => {
-    getProductsData(`products?limit=6&$skip=${skip}`);
+    category === "all"
+      ? getProductsData(`products?limit=6&$skip=${skip}`)
+      : getProductsData(`products/category/${category}?limit=6&$skip=${skip}`);
+
     controllScreen();
-  }, []);
+  }, [category, skip]);
+  const handleCategoryClick = (e: any) => {
+    setCategory(e.target.title);
+    document
+      .querySelectorAll(".category-active")
+      .forEach((element) => (element.className = ""));
+    e.target.className = "category-active";
+  };
   return (
     <div>
       <div className="loading-board"></div>
@@ -31,13 +42,31 @@ export const Products = () => {
         <section className="products-list-page">
           <header className="body-heading">
             <ul className="products">
-              <li className="active">All Products</li>
-              <li>Smartphones</li>
-              <li>Laptops</li>
-              <li>Fragrances</li>
-              <li>Skincare</li>
-              <li>Groceries</li>
-              <li>Home Decoration</li>
+              <li
+                className="category-active"
+                title="all"
+                onClick={handleCategoryClick}
+              >
+                All Products
+              </li>
+              <li title="smartphones" onClick={handleCategoryClick}>
+                Smartphones
+              </li>
+              <li title="laptops" onClick={handleCategoryClick}>
+                Laptops
+              </li>
+              <li title="fragrances" onClick={handleCategoryClick}>
+                Fragrances
+              </li>
+              <li title="skincare" onClick={handleCategoryClick}>
+                Skincare
+              </li>
+              <li title="groceries" onClick={handleCategoryClick}>
+                Groceries
+              </li>
+              <li title="home-decoration" onClick={handleCategoryClick}>
+                Home Decoration
+              </li>
             </ul>
           </header>
           <ProductsList>

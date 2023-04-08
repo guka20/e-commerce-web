@@ -17,6 +17,6 @@
   text-transform: uppercase;
   cursor: pointer;
 }
-.products-list-page .body-heading .products li.active {
+.products-list-page .body-heading .products li.category-active {
   color: #f33f3f;
 }
