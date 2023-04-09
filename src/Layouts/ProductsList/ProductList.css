@@ -2,4 +2,5 @@ main.products-list {
   display: grid;
   grid-template-columns: auto auto auto;
   gap: 20px;
+  position: relative;
 }

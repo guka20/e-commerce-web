@@ -12,13 +12,16 @@ export const Products = () => {
   const [category, setCategory] = useState("all");
   const getProductsData = async (url: string) => {
     const resp = await axios.get(url);
+    console.log(resp.data.products);
+    console.log(url);
+
     setProductData(resp.data.products);
   };
   useEffect(() => {
+    setProductData(undefined);
     category === "all"
-      ? getProductsData(`products?limit=6&$skip=${skip}`)
-      : getProductsData(`products/category/${category}?limit=6&$skip=${skip}`);
-
+      ? getProductsData(`products?limit=6&skip=${skip}`)
+      : getProductsData(`products/category/${category}?limit=6&skip=${skip}`);
     controllScreen();
   }, [category, skip]);
   const handleCategoryClick = (e: any) => {
@@ -70,7 +73,7 @@ export const Products = () => {
             </ul>
           </header>
           <ProductsList>
-            {productData &&
+            {productData ? (
               productData.map((l) => (
                 <ProductCard
                   key={l.id}
@@ -81,8 +84,15 @@ export const Products = () => {
                   rating={Math.floor(l.rating)}
                   review={l.stock + ""}
                 />
-              ))}
+              ))
+            ) : (
+              <div className="loading"></div>
+            )}
           </ProductsList>
+          <button onClick={() => setSkip(0)}>1</button>
+          <button onClick={() => setSkip(6)}>2</button>
+          <button onClick={() => setSkip(12)}>3</button>
+          <button onClick={() => setSkip(18)}>4</button>
         </section>
       </BodyLayout>
     </div>

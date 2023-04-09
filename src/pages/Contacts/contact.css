@@ -50,6 +50,9 @@
   font-weight: 100;
   cursor: pointer;
 }
+.contact-us .inputs-textures .textures h3:hover {
+  color: #f33f3f;
+}
 .contact-us .inputs-textures .textures .open-header {
   color: #f33f3f;
 }
