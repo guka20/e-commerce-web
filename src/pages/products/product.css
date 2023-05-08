@@ -20,3 +20,18 @@
 .products-list-page .body-heading .products li.category-active {
   color: #f33f3f;
 }
+
+.MuiPagination-ul li button {
+  border: none;
+  color: black;
+  font-weight: bolder;
+  border-radius: 0;
+}
+.MuiPagination-ul li button:hover {
+  background-color: #f33f3f !important;
+  color: white !important;
+}
+.css-kvsszq-MuiButtonBase-root-MuiPaginationItem-root.Mui-selected {
+  background-color: #f33f3f !important;
+  color: white;
+}

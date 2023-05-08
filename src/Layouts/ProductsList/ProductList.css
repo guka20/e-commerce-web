@@ -1,6 +1,21 @@
 main.products-list {
   display: grid;
-  grid-template-columns: auto auto auto;
+  grid-template-columns: repeat(3, minmax(250px, 1fr));
   gap: 20px;
   position: relative;
+  justify-items: center;
+  justify-content: space-between;
+}
+
+/* RESPONSIVE */
+
+@media screen and (max-width: 900px) {
+  main.products-list {
+    grid-template-columns: repeat(2, minmax(250px, 1fr));
+  }
+}
+@media screen and (max-width: 650px) {
+  main.products-list {
+    grid-template-columns: repeat(1, 100%);
+  }
 }

@@ -72,3 +72,33 @@
   margin: 0;
   font-size: 14px;
 }
+
+@media screen and (max-width: 900px) {
+  .body-heading {
+    flex-direction: column;
+    align-items: flex-start;
+    padding-bottom: 10px;
+  }
+  .about-sexteen-clothing .description {
+    flex-direction: column;
+  }
+
+  .about-sexteen-clothing .description img {
+    width: 100%;
+    margin-top: 50px;
+  }
+  .creative-and-unique {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+  .creative-and-unique p {
+    width: 100%;
+    max-width: 500px;
+  }
+  .creative-and-unique .primary-button {
+    width: 100%;
+    margin-top: 10px;
+    max-width: 500px;
+  }
+}

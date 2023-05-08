@@ -6,8 +6,9 @@
   z-index: 5;
   transition: all 0.5s;
 }
+
 .navbar-place .navbar {
-  width: 100%;
+  width: 95%;
   max-width: 1140px;
   display: flex;
   justify-content: space-between;
@@ -21,6 +22,7 @@
 .navbar-place .navbar ul.links {
   display: flex;
   margin: 0;
+  transition: max-height 1s linear;
 }
 
 .navbar-place .navbar .links li {
@@ -31,6 +33,7 @@
   position: relative;
   font-weight: lighter;
 }
+
 .navbar-place .navbar .links li:hover::after {
   content: "";
   width: 100%;
@@ -43,7 +46,8 @@
   background-color: rgb(243, 63, 63);
   animation: hover-animation 0.5s 1;
 }
-.navbar-place .navbar .links .active li::after {
+
+.navbar-place .navbar .links li .active::after {
   content: "";
   width: 100%;
   padding: 0 10px;
@@ -54,7 +58,11 @@
   transform: translateX(-50%);
   background-color: rgb(243, 63, 63);
 }
-
+.navbar-place .navbar .menu-icon {
+  color: rgb(243, 63, 63);
+  cursor: pointer;
+  display: none;
+}
 @keyframes hover-animation {
   from {
     bottom: 20px;
@@ -63,5 +71,28 @@
   to {
     bottom: 0;
     background-color: rgb(243, 63, 63);
+  }
+}
+@media screen and (max-width: 900px) {
+  .navbar-place .navbar .menu-icon {
+    display: block;
+  }
+  .navbar-place .navbar ul.links {
+    max-height: 0px;
+    overflow: hidden;
+    position: absolute;
+    flex-direction: column;
+    align-items: center;
+    top: 70px;
+    left: 0;
+    width: 100%;
+    background-color: white;
+  }
+  .navbar-place .navbar ul.links.open {
+    max-height: 350px;
+    background-color: white !important;
+  }
+  .navbar-place .navbar .links li a {
+    color: #232323 !important;
   }
 }

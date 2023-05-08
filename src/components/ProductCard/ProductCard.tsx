@@ -27,7 +27,9 @@ export const ProductCard = ({
               <AiFillStar key={index} style={{ color: "rgb(243, 63, 63" }} />
             ))}
           </span>
-          <span style={{ color: "rgb(243, 63, 63" }}>Reviews({review})</span>
+          <span className="reviews" style={{ color: "rgb(243, 63, 63" }}>
+            Reviews({review})
+          </span>
         </footer>
       </div>
     </div>

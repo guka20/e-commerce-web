@@ -34,3 +34,18 @@
   letter-spacing: 6px;
   width: max-content;
 }
+
+@media screen and (max-width: 900px) {
+  .page-header .headers-container .title {
+    font-size: 3rem;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .page-header .headers-container .sub-title {
+    font-size: 1.5rem;
+  }
+  .page-header .headers-container .title {
+    font-size: 2rem;
+  }
+}

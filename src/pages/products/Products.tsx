@@ -5,16 +5,16 @@ import { controllScreen } from "../../config/controllScreen";
 import { BodyLayout, ProductsList } from "../../Layouts";
 import { ProductsDataProt } from "../../props/props";
 import axios from "../../config/api";
-
+import Pagination from "@mui/material/Pagination";
+import Stack from "@mui/material/Stack";
 export const Products = () => {
   const [productData, setProductData] = useState<ProductsDataProt>();
+  const [totalProduct, setTotalProduct] = useState<Number>(6);
   const [skip, setSkip] = useState<Number>(0);
   const [category, setCategory] = useState("all");
   const getProductsData = async (url: string) => {
     const resp = await axios.get(url);
-    console.log(resp.data.products);
-    console.log(url);
-
+    setTotalProduct(resp.data.total);
     setProductData(resp.data.products);
   };
   useEffect(() => {
@@ -30,6 +30,11 @@ export const Products = () => {
       .querySelectorAll(".category-active")
       .forEach((element) => (element.className = ""));
     e.target.className = "category-active";
+  };
+  const handlePaginationChange = (e: any) => {
+    console.log(e);
+
+    setSkip((e.target.innerText - 1) * 6);
   };
   return (
     <div>
@@ -89,10 +94,16 @@ export const Products = () => {
               <div className="loading"></div>
             )}
           </ProductsList>
-          <button onClick={() => setSkip(0)}>1</button>
-          <button onClick={() => setSkip(6)}>2</button>
-          <button onClick={() => setSkip(12)}>3</button>
-          <button onClick={() => setSkip(18)}>4</button>
+          <Stack spacing={2}>
+            <Pagination
+              count={Math.round((totalProduct as number) / 6)}
+              variant="outlined"
+              shape="rounded"
+              onChange={handlePaginationChange}
+              style={{ margin: "50px auto" }}
+              size="large"
+            />
+          </Stack>
         </section>
       </BodyLayout>
     </div>

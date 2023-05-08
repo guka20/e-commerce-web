@@ -121,6 +121,7 @@ export const Home = () => {
                 <li>Corporis, omnis doloremque</li>
                 <li>Non cum id reprehenderit</li>
               </ol>
+              <PrimaryButton>Read More</PrimaryButton>
             </div>
             <img
               src={require("../../images/feature-image.jpg")}
@@ -128,7 +129,6 @@ export const Home = () => {
               className="feature-img"
             />
           </div>
-          <PrimaryButton>Read More</PrimaryButton>
         </section>
         <section className="creative-and-unique">
           <div className="texture">
